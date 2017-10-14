@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        
+        <style>
+            .error {
+                color:red;
+            }
+            h1 {
+                background-color:black;
+                font-family:Courier;
+                color:white;
+            }
+            h2 {color:Blue;}
+            p {
+                font-family: Cursive;
+            }
+        </style>
+        
+        <title>
+            {{title}}
+        </title>
+    
+    </head>
+    <body>
+
+        <nav>
+        <a href='/blog'>Main Blog Page</a> |
+        <a href='/newpost'>Add A Blog Entry</a>
+        </nav>
+
+        {% block content %}
+        {% endblock %}
+
+    </body>
+</html>
