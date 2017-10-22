@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1 align='center'>Blogz!</h1>
+
+    {% for blog in blogs %}
+        {% if individual_user == blog.owner.username %}
+            <h2><a href="/blog?blog_id={{blog.id}}">{{blog.title}}</a></h2>
+            <p>{{blog.body}}<p>
+            <p><i>Written by <a href='/blog?user={{blog.owner.username}}'>{{blog.owner.username}}</a></i></p>
+        {% endif %}
+    {% endfor %}
+
+{% endblock %}
